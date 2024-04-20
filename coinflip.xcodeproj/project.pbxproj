@@ -493,7 +493,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"coinflip Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 45BFR3YKH6;
+				DEVELOPMENT_TEAM = 6YK6233S45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "coinflip-Watch-App-Info.plist";
@@ -505,7 +505,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = simplesoftworks.coinflip.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = simplesoftworks.coinfliplweimertest.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -526,7 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"coinflip Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 45BFR3YKH6;
+				DEVELOPMENT_TEAM = 6YK6233S45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "coinflip-Watch-App-Info.plist";
@@ -538,7 +538,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = simplesoftworks.coinflip.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = simplesoftworks.coinfliplweimertest.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -557,10 +557,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 45BFR3YKH6;
+				DEVELOPMENT_TEAM = 6YK6233S45;
 				INFOPLIST_KEY_CFBundleDisplayName = coinflip;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = simplesoftworks.coinflip;
+				PRODUCT_BUNDLE_IDENTIFIER = simplesoftworks.coinflip.lweimertest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -576,10 +576,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 45BFR3YKH6;
+				DEVELOPMENT_TEAM = 6YK6233S45;
 				INFOPLIST_KEY_CFBundleDisplayName = coinflip;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = simplesoftworks.coinflip;
+				PRODUCT_BUNDLE_IDENTIFIER = simplesoftworks.coinflip.lweimertest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -597,10 +597,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 45BFR3YKH6;
+				DEVELOPMENT_TEAM = 6YK6233S45;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "simplesoftworks.coinflip-Watch-AppTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "simplesoftworks.coinfliplweimertest-Watch-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -618,10 +618,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 45BFR3YKH6;
+				DEVELOPMENT_TEAM = 6YK6233S45;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "simplesoftworks.coinflip-Watch-AppTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "simplesoftworks.coinfliplweimertest-Watch-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -639,10 +639,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 45BFR3YKH6;
+				DEVELOPMENT_TEAM = 6YK6233S45;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "simplesoftworks.coinflip-Watch-AppUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "simplesoftworks.coinfliplweimertest-Watch-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -659,10 +659,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 45BFR3YKH6;
+				DEVELOPMENT_TEAM = 6YK6233S45;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "simplesoftworks.coinflip-Watch-AppUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "simplesoftworks.coinfliplweimertest-Watch-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
