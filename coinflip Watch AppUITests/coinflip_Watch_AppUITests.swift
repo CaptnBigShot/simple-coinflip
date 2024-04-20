@@ -1,11 +1,6 @@
-//
-//  coinflip_Watch_AppUITests.swift
-//  coinflip Watch AppUITests
-//
 import XCTest
 
 final class coinflip_Watch_AppUITests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -19,12 +14,51 @@ final class coinflip_Watch_AppUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testFlipCoin() throws {
         let app = XCUIApplication()
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let flipCoinBtn = app.buttons["FlipCoinButton"]
+        XCTAssertTrue(flipCoinBtn.exists)
+        flipCoinBtn.tap()
+        
+        let coinflipResultIcon = app.staticTexts["CoinflipResultIcon"]
+        XCTAssertTrue(coinflipResultIcon.waitForExistence(timeout: 3))
+        
+        let coinflipResultText = app.staticTexts["CoinflipResult"]
+        XCTAssertTrue(coinflipResultText.exists)
+        XCTAssert(coinflipResultText.label == "It's Heads!" || coinflipResultText.label == "It's Tails!")
+    }
+    
+    func testCoinFlipSessionStats() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        let flipCoinBtn = app.buttons["FlipCoinButton"]
+        
+        flipCoinBtn.tap()
+        
+        let headsCountIcon = app.images["TotalHeadsCountIcon"]
+        XCTAssertFalse(headsCountIcon.exists)
+        let headsCountText = app.staticTexts["TotalHeadsCount"]
+        XCTAssertFalse(headsCountText.exists)
+        
+        let tailsCountIcon = app.images["TotalTailsCountIcon"]
+        XCTAssertFalse(tailsCountIcon.exists)
+        let tailsCountText = app.staticTexts["TotalTailsCount"]
+        XCTAssertFalse(tailsCountText.exists)
+        
+        flipCoinBtn.tap()
+        
+        XCTAssertTrue(headsCountIcon.waitForExistence(timeout: 5))
+        XCTAssertTrue(headsCountText.exists)
+        XCTAssertTrue(tailsCountIcon.exists)
+        XCTAssertTrue(tailsCountText.exists)
+        
+        let headsCount = Int(headsCountText.label) ?? Int.min
+        let tailsCount = Int(tailsCountText.label) ?? Int.max
+        let totalCount = headsCount + tailsCount
+        XCTAssertEqual(totalCount, 2)
     }
 
     func testLaunchPerformance() throws {
