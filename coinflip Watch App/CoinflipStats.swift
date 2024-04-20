@@ -12,7 +12,7 @@ class CoinflipStats: ObservableObject {
     func addCoinflip(coin: Coin) -> Void {
         if (coin.result == CoinflipResult.Heads) {
             self.headsCount += 1
-        } else {
+        } else if (coin.result == CoinflipResult.Tails) {
             self.tailsCount += 1
         }
     }

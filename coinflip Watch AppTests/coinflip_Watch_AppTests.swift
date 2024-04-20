@@ -2,27 +2,43 @@ import XCTest
 @testable import coinflip_Watch_App
 
 final class coinflip_Watch_AppTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testFlipCoin() throws {
         var coin = Coin()
-        XCTAssert(coin.wasFlipped() == false)
+        XCTAssertEqual(coin.result, CoinflipResult.Unflipped)
+        XCTAssertFalse(coin.wasFlipped())
         
         coin.flip()
-        XCTAssert(coin.wasFlipped() == true)
+        XCTAssert(coin.result == CoinflipResult.Heads || coin.result == CoinflipResult.Tails)
+        XCTAssertTrue(coin.wasFlipped())
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testCoinflipStats() throws {
+        var coinflipStats = CoinflipStats()
+        XCTAssertEqual(coinflipStats.headsCount, 0)
+        XCTAssertEqual(coinflipStats.tailsCount, 0)
+        XCTAssertEqual(coinflipStats.totalCount, 0)
+        
+        // Add an Unflipped coinflip result
+        var coinUnflipped = Coin()
+        coinflipStats.addCoinflip(coin: coinUnflipped)
+        XCTAssertEqual(coinflipStats.headsCount, 0)
+        XCTAssertEqual(coinflipStats.tailsCount, 0)
+        XCTAssertEqual(coinflipStats.totalCount, 0)
+        
+        // Add a Heads coinflip result
+        var coinHeads = Coin()
+        coinHeads.result = CoinflipResult.Heads
+        coinflipStats.addCoinflip(coin: coinHeads)
+        XCTAssertEqual(coinflipStats.headsCount, 1)
+        XCTAssertEqual(coinflipStats.tailsCount, 0)
+        XCTAssertEqual(coinflipStats.totalCount, 1)
+        
+        // Add a Tails coinflip result
+        var coinTails = Coin()
+        coinTails.result = CoinflipResult.Tails
+        coinflipStats.addCoinflip(coin: coinTails)
+        XCTAssertEqual(coinflipStats.headsCount, 1)
+        XCTAssertEqual(coinflipStats.tailsCount, 1)
+        XCTAssertEqual(coinflipStats.totalCount, 2)
     }
 }
