@@ -13,13 +13,13 @@ final class coinflip_Watch_AppTests: XCTestCase {
     }
     
     func testCoinflipStats() throws {
-        var coinflipStats = CoinflipStats()
+        let coinflipStats = CoinflipStats()
         XCTAssertEqual(coinflipStats.headsCount, 0)
         XCTAssertEqual(coinflipStats.tailsCount, 0)
         XCTAssertEqual(coinflipStats.totalCount, 0)
         
         // Add an Unflipped coinflip result
-        var coinUnflipped = Coin()
+        let coinUnflipped = Coin()
         coinflipStats.addCoinflip(coin: coinUnflipped)
         XCTAssertEqual(coinflipStats.headsCount, 0)
         XCTAssertEqual(coinflipStats.tailsCount, 0)
