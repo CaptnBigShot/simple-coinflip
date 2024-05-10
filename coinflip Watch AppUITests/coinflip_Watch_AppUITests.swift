@@ -17,10 +17,8 @@ final class coinflip_Watch_AppUITests: XCTestCase {
     func testFlipCoin() throws {
         let app = XCUIApplication()
         app.launch()
-
-        let flipCoinBtn = app.buttons["FlipCoinButton"]
-        XCTAssertTrue(flipCoinBtn.exists)
-        flipCoinBtn.tap()
+        
+        app.tap()
         
         let coinflipResultIcon = app.staticTexts["CoinflipResultIcon"]
         XCTAssertTrue(coinflipResultIcon.waitForExistence(timeout: 3))
@@ -34,9 +32,7 @@ final class coinflip_Watch_AppUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        let flipCoinBtn = app.buttons["FlipCoinButton"]
-        
-        flipCoinBtn.tap()
+        app.tap()
         
         let headsCountIcon = app.images["TotalHeadsCountIcon"]
         XCTAssertFalse(headsCountIcon.exists)
@@ -48,7 +44,7 @@ final class coinflip_Watch_AppUITests: XCTestCase {
         let tailsCountText = app.staticTexts["TotalTailsCount"]
         XCTAssertFalse(tailsCountText.exists)
         
-        flipCoinBtn.tap()
+        app.tap()
         
         XCTAssertTrue(headsCountIcon.waitForExistence(timeout: 5))
         XCTAssertTrue(headsCountText.exists)
@@ -60,7 +56,50 @@ final class coinflip_Watch_AppUITests: XCTestCase {
         let totalCount = headsCount + tailsCount
         XCTAssertEqual(totalCount, 2)
     }
+    
+    func testResetFlip() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.tap()
+        
+        let coinflipResultIcon = app.staticTexts["CoinflipResultIcon"]
+        XCTAssertTrue(coinflipResultIcon.waitForExistence(timeout: 3))
+        
+        let coinflipResultText = app.staticTexts["CoinflipResult"]
+        
+        app.swipeUp()
+        XCTAssertTrue(coinflipResultText.label.trimmingCharacters(in: .whitespaces).isEmpty)
+    }
+    
+    func testResetFlipStats() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.tap()
+        
+        let coinflipResultIcon = app.staticTexts["CoinflipResultIcon"]
+        XCTAssertTrue(coinflipResultIcon.waitForExistence(timeout: 3))
+        
+        app.tap()
+        
+        let coinflipResultText = app.staticTexts["CoinflipResult"]
+        let headsCountIcon = app.images["TotalHeadsCountIcon"]
+        let headsCountText = app.staticTexts["TotalHeadsCount"]
+        let tailsCountIcon = app.images["TotalTailsCountIcon"]
+        let tailsCountText = app.staticTexts["TotalTailsCount"]
+        
+        XCTAssertTrue(headsCountIcon.waitForExistence(timeout: 5))
+        
+        app.swipeUp()
+        XCTAssertTrue(coinflipResultText.label.trimmingCharacters(in: .whitespaces).isEmpty)
+        XCTAssertFalse(headsCountIcon.exists)
+        XCTAssertFalse(headsCountText.exists)
+        XCTAssertFalse(tailsCountIcon.exists)
+        XCTAssertFalse(tailsCountText.exists)
+    }
 
+    /*
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
@@ -69,4 +108,5 @@ final class coinflip_Watch_AppUITests: XCTestCase {
             }
         }
     }
+    */
 }

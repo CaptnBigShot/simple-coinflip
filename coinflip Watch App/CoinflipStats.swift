@@ -20,4 +20,9 @@ class CoinflipStats: ObservableObject {
     var totalCount: Int {
         return headsCount + tailsCount
     }
+    
+    func resetStats() -> Void {
+        headsCount = 0
+        tailsCount = 0
+    }
 }
