@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6740866C2BD080D200EF5F40 /* Simply Coinflip Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6740866B2BD080D200EF5F40 /* Simply Coinflip Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		674086712BD080D200EF5F40 /* coinflipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674086702BD080D200EF5F40 /* coinflipApp.swift */; };
+		674086712BD080D200EF5F40 /* SimplyCoinflipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674086702BD080D200EF5F40 /* SimplyCoinflipApp.swift */; };
 		674086732BD080D200EF5F40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674086722BD080D200EF5F40 /* ContentView.swift */; };
 		674086752BD080D400EF5F40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674086742BD080D400EF5F40 /* Assets.xcassets */; };
 		674086782BD080D400EF5F40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674086772BD080D400EF5F40 /* Preview Assets.xcassets */; };
-		674086822BD080D400EF5F40 /* coinflip_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674086812BD080D400EF5F40 /* coinflip_Watch_AppTests.swift */; };
-		6740868C2BD080D400EF5F40 /* coinflip_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740868B2BD080D400EF5F40 /* coinflip_Watch_AppUITests.swift */; };
-		6740868E2BD080D400EF5F40 /* coinflip_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740868D2BD080D400EF5F40 /* coinflip_Watch_AppUITestsLaunchTests.swift */; };
+		674086822BD080D400EF5F40 /* Simply_Coinflip_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674086812BD080D400EF5F40 /* Simply_Coinflip_Watch_AppTests.swift */; };
+		6740868C2BD080D400EF5F40 /* Simply_Coinflip_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740868B2BD080D400EF5F40 /* Simply_Coinflip_Watch_AppUITests.swift */; };
+		6740868E2BD080D400EF5F40 /* Simply_Coinflip_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6740868D2BD080D400EF5F40 /* Simply_Coinflip_Watch_AppUITestsLaunchTests.swift */; };
 		674086A32BD2057C00EF5F40 /* CoinflipStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674086A22BD2057C00EF5F40 /* CoinflipStats.swift */; };
 		674086A52BD20F3B00EF5F40 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674086A42BD20F3B00EF5F40 /* Coin.swift */; };
 		674086A72BD20FA500EF5F40 /* CoinflipResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674086A62BD20FA500EF5F40 /* CoinflipResult.swift */; };
@@ -62,15 +62,15 @@
 /* Begin PBXFileReference section */
 		674086652BD080D200EF5F40 /* Simply Coinflip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simply Coinflip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6740866B2BD080D200EF5F40 /* Simply Coinflip Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simply Coinflip Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		674086702BD080D200EF5F40 /* coinflipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coinflipApp.swift; sourceTree = "<group>"; };
+		674086702BD080D200EF5F40 /* SimplyCoinflipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplyCoinflipApp.swift; sourceTree = "<group>"; };
 		674086722BD080D200EF5F40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		674086742BD080D400EF5F40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		674086772BD080D400EF5F40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6740867D2BD080D400EF5F40 /* Simply Coinflip Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simply Coinflip Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		674086812BD080D400EF5F40 /* coinflip_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coinflip_Watch_AppTests.swift; sourceTree = "<group>"; };
+		674086812BD080D400EF5F40 /* Simply_Coinflip_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simply_Coinflip_Watch_AppTests.swift; sourceTree = "<group>"; };
 		674086872BD080D400EF5F40 /* Simply Coinflip Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simply Coinflip Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6740868B2BD080D400EF5F40 /* coinflip_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coinflip_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		6740868D2BD080D400EF5F40 /* coinflip_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coinflip_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6740868B2BD080D400EF5F40 /* Simply_Coinflip_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simply_Coinflip_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		6740868D2BD080D400EF5F40 /* Simply_Coinflip_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simply_Coinflip_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		674086A22BD2057C00EF5F40 /* CoinflipStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinflipStats.swift; sourceTree = "<group>"; };
 		674086A42BD20F3B00EF5F40 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		674086A62BD20FA500EF5F40 /* CoinflipResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinflipResult.swift; sourceTree = "<group>"; };
@@ -107,9 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				6775AF6F2BD427CA005BC5B1 /* .gitignore */,
-				6740866F2BD080D200EF5F40 /* coinflip Watch App */,
-				674086802BD080D400EF5F40 /* coinflip Watch AppTests */,
-				6740868A2BD080D400EF5F40 /* coinflip Watch AppUITests */,
+				6740866F2BD080D200EF5F40 /* Simply Coinflip Watch App */,
+				674086802BD080D400EF5F40 /* Simply Coinflip Watch AppTests */,
+				6740868A2BD080D400EF5F40 /* Simply Coinflip Watch AppUITests */,
 				674086662BD080D200EF5F40 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,11 +125,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6740866F2BD080D200EF5F40 /* coinflip Watch App */ = {
+		6740866F2BD080D200EF5F40 /* Simply Coinflip Watch App */ = {
 			isa = PBXGroup;
 			children = (
 				6775AF6E2BD32511005BC5B1 /* Simply Coinflip-Watch-App-Info.plist */,
-				674086702BD080D200EF5F40 /* coinflipApp.swift */,
+				674086702BD080D200EF5F40 /* SimplyCoinflipApp.swift */,
 				674086722BD080D200EF5F40 /* ContentView.swift */,
 				674086742BD080D400EF5F40 /* Assets.xcassets */,
 				674086762BD080D400EF5F40 /* Preview Content */,
@@ -137,7 +137,7 @@
 				674086A42BD20F3B00EF5F40 /* Coin.swift */,
 				674086A62BD20FA500EF5F40 /* CoinflipResult.swift */,
 			);
-			path = "coinflip Watch App";
+			path = "Simply Coinflip Watch App";
 			sourceTree = "<group>";
 		};
 		674086762BD080D400EF5F40 /* Preview Content */ = {
@@ -148,21 +148,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		674086802BD080D400EF5F40 /* coinflip Watch AppTests */ = {
+		674086802BD080D400EF5F40 /* Simply Coinflip Watch AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				674086812BD080D400EF5F40 /* coinflip_Watch_AppTests.swift */,
+				674086812BD080D400EF5F40 /* Simply_Coinflip_Watch_AppTests.swift */,
 			);
-			path = "coinflip Watch AppTests";
+			path = "Simply Coinflip Watch AppTests";
 			sourceTree = "<group>";
 		};
-		6740868A2BD080D400EF5F40 /* coinflip Watch AppUITests */ = {
+		6740868A2BD080D400EF5F40 /* Simply Coinflip Watch AppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6740868B2BD080D400EF5F40 /* coinflip_Watch_AppUITests.swift */,
-				6740868D2BD080D400EF5F40 /* coinflip_Watch_AppUITestsLaunchTests.swift */,
+				6740868B2BD080D400EF5F40 /* Simply_Coinflip_Watch_AppUITests.swift */,
+				6740868D2BD080D400EF5F40 /* Simply_Coinflip_Watch_AppUITestsLaunchTests.swift */,
 			);
-			path = "coinflip Watch AppUITests";
+			path = "Simply Coinflip Watch AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +328,7 @@
 				674086A72BD20FA500EF5F40 /* CoinflipResult.swift in Sources */,
 				674086A32BD2057C00EF5F40 /* CoinflipStats.swift in Sources */,
 				674086A52BD20F3B00EF5F40 /* Coin.swift in Sources */,
-				674086712BD080D200EF5F40 /* coinflipApp.swift in Sources */,
+				674086712BD080D200EF5F40 /* SimplyCoinflipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				674086822BD080D400EF5F40 /* coinflip_Watch_AppTests.swift in Sources */,
+				674086822BD080D400EF5F40 /* Simply_Coinflip_Watch_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6740868E2BD080D400EF5F40 /* coinflip_Watch_AppUITestsLaunchTests.swift in Sources */,
-				6740868C2BD080D400EF5F40 /* coinflip_Watch_AppUITests.swift in Sources */,
+				6740868E2BD080D400EF5F40 /* Simply_Coinflip_Watch_AppUITestsLaunchTests.swift in Sources */,
+				6740868C2BD080D400EF5F40 /* Simply_Coinflip_Watch_AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,12 +492,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"coinflip Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Simply Coinflip Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 45BFR3YKH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Simply Coinflip-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = coinflip;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simply Coinflip";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -525,12 +525,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"coinflip Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Simply Coinflip Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 45BFR3YKH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Simply Coinflip-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = coinflip;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simply Coinflip";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -558,7 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 45BFR3YKH6;
-				INFOPLIST_KEY_CFBundleDisplayName = coinflip;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simply Coinflip";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = simplesoftworks.coinflip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -577,7 +577,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 45BFR3YKH6;
-				INFOPLIST_KEY_CFBundleDisplayName = coinflip;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simply Coinflip";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = simplesoftworks.coinflip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -648,7 +648,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "coinflip Watch App";
+				TEST_TARGET_NAME = "Simply Coinflip Watch App";
 				WATCHOS_DEPLOYMENT_TARGET = 10.4;
 			};
 			name = Debug;
@@ -668,7 +668,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "coinflip Watch App";
+				TEST_TARGET_NAME = "Simply Coinflip Watch App";
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 10.4;
 			};
