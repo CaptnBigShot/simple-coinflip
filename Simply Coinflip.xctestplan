@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "06DB7E9F-0126-4C6C-B762-7AF789698CB3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Simply Coinflip.xcodeproj",
+        "identifier" : "67EBFB192C1E473A00B42D39",
+        "name" : "Simply Coinflip Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Simply Coinflip.xcodeproj",
+        "identifier" : "67EBFB232C1E473A00B42D39",
+        "name" : "Simply Coinflip UITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,7 +1,7 @@
 import XCTest
-@testable import Simply_Coinflip_Watch_App
+@testable import Simply_Coinflip
 
-final class Simply_Coinflip_Watch_AppTests: XCTestCase {
+final class Simply_Coinflip_Tests: XCTestCase {
     func testFlipCoin() throws {
         var coin = Coin()
         XCTAssertEqual(coin.result, CoinflipResult.Unflipped)
