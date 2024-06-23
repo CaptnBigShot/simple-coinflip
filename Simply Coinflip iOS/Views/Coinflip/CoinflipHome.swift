@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct CoinflipHome: View {
     @State private var coin = Coin()
     @StateObject private var sessionStats = CoinflipStats()
     @State private var isShowingText = true
@@ -10,38 +10,6 @@ struct ContentView: View {
         sessionStats.addCoinflip(coin: coin)
     }
     
-    func getCoinColor() -> Color {
-        if (!isShowingText) {
-            return Color.white
-        }
-        
-        if (coin.result == CoinflipResult.Heads) {
-            return Color.yellow
-        }
-        
-        if (coin.result == CoinflipResult.Tails) {
-            return Color.orange
-        }
-        
-        return Color.cyan
-    }
-    
-    func getCoinImage() -> String {
-        if (!isShowingText) {
-            return ""
-        }
-        
-        if (coin.result == CoinflipResult.Heads) {
-            return "brain.head.profile"
-        }
-        
-        if (coin.result == CoinflipResult.Tails) {
-            return "cat"
-        }
-        
-        return "centsign.circle"
-    }
-    
     var flipAnimation: Animation {
         Animation.easeInOut(duration: 1)
     }
@@ -49,9 +17,9 @@ struct ContentView: View {
     var body: some View {
         ZStack() {
             Circle()
-                .fill(getCoinColor())
+                .fill(AnyShapeStyle(coin.getCoinColor(isShowingText: isShowingText)))
                 .stroke(Color.white, lineWidth:2)
-                .scaleEffect(isShowingText ? 1 : 2.5)
+                .scaleEffect(isShowingText ? 1 : 2.7)
                 .animation(
                     flipAnimation,
                     value: coin.wasFlipped()
@@ -59,10 +27,11 @@ struct ContentView: View {
                 .blur(radius: (1) * 20)
                 .frame(width: .infinity, height: .infinity)
                 .padding(.top, -20)
+                .padding(.horizontal, 20)
             
             if (isShowingText) {
-                Text(Image(systemName: getCoinImage()))
-                    .font(.title)
+                Text(Image(systemName: coin.getCoinImage(isShowingText: isShowingText)))
+                    .font(.system(size: 70))
                     .opacity(1)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     .accessibilityIdentifier("CoinflipResultIcon")
@@ -77,20 +46,25 @@ struct ContentView: View {
                         VStack {
                             if (sessionStats.totalCount > 1) {
                                 Image(systemName: "brain.head.profile")
+                                    .font(.system(size: 30))
                                     .accessibilityIdentifier("TotalHeadsCountIcon")
                                 Text(sessionStats.headsCount.description)
+                                    .font(.system(size: 30))
                                     .accessibilityIdentifier("TotalHeadsCount")
                             }
                         }
                         
                         Text(coin.wasFlipped() ? "It's " + coin.result.description + "!" : " ")
+                            .font(.system(size: 30))
                             .accessibilityIdentifier("CoinflipResult")
                         
                         VStack {
                             if (sessionStats.totalCount > 1) {
                                 Image(systemName: "cat")
+                                    .font(.system(size: 30))
                                     .accessibilityIdentifier("TotalTailsCountIcon")
                                 Text(sessionStats.tailsCount.description)
+                                    .font(.system(size: 30))
                                     .accessibilityIdentifier("TotalTailsCount")
                             }
                         }
@@ -111,6 +85,10 @@ struct ContentView: View {
             }
             flipCoin()
         }
+        .background(Color.black)
+        .foregroundStyle(
+            Color.white
+        )
         .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
             .onEnded { value in
                 print(value.translation)
@@ -126,8 +104,4 @@ struct ContentView: View {
             }
         )
     }
-}
-
-#Preview {
-    ContentView()
 }

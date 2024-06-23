@@ -1,6 +1,6 @@
 import Foundation
 
-class CoinflipStats: ObservableObject {
+public class CoinflipStats: ObservableObject {
     @Published var headsCount: Int
     @Published var tailsCount: Int
     
