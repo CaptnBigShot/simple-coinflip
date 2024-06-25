@@ -17,31 +17,37 @@ public struct Coin {
     }
     
     func getCoinColor(isShowingText: Bool) -> any ShapeStyle {
-        if (!isShowingText) {
-            return Color.white
-        }
-        
-        if (self.result == CoinflipResult.Heads) {
-            return LinearGradient(
-                colors: [.yellow, .orange],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-        }
-        
-        if (self.result == CoinflipResult.Tails) {
-            return LinearGradient(
-                colors: [.pink, .purple],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-        }
-        
-        return LinearGradient(
+        let defaultColor = LinearGradient(
             colors: [.teal, .indigo],
             startPoint: .top,
             endPoint: .bottom
         )
+        
+        let headsColor = LinearGradient(
+            colors: [.yellow, .orange],
+            startPoint: .top,
+            endPoint: .bottom
+        )
+        
+        let tailsColor = LinearGradient(
+            colors: [.mint, .green],
+            startPoint: .top,
+            endPoint: .bottom
+        )
+        
+        if (!isShowingText) {
+            return defaultColor
+        }
+        
+        if (self.result == CoinflipResult.Heads) {
+            return headsColor
+        }
+        
+        if (self.result == CoinflipResult.Tails) {
+            return tailsColor
+        }
+        
+        return defaultColor
     }
     
     func getCoinImage(isShowingText: Bool) -> String {

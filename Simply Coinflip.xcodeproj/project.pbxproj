@@ -31,6 +31,8 @@
 		67EBFB422C27C47700B42D39 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB412C27C47700B42D39 /* Coin.swift */; };
 		67EBFB442C27C48100B42D39 /* CoinflipResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB432C27C48100B42D39 /* CoinflipResult.swift */; };
 		67EBFB462C27C48A00B42D39 /* CoinflipStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB452C27C48A00B42D39 /* CoinflipStats.swift */; };
+		67EBFB482C2B826900B42D39 /* CoinflipStatsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB472C2B826900B42D39 /* CoinflipStatsStack.swift */; };
+		67EBFB4A2C2B856E00B42D39 /* CoinflipCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB492C2B856E00B42D39 /* CoinflipCoin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		67EBFB412C27C47700B42D39 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		67EBFB432C27C48100B42D39 /* CoinflipResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinflipResult.swift; sourceTree = "<group>"; };
 		67EBFB452C27C48A00B42D39 /* CoinflipStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinflipStats.swift; sourceTree = "<group>"; };
+		67EBFB472C2B826900B42D39 /* CoinflipStatsStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinflipStatsStack.swift; sourceTree = "<group>"; };
+		67EBFB492C2B856E00B42D39 /* CoinflipCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinflipCoin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				67EBFB3E2C27C41000B42D39 /* CoinflipHome.swift */,
+				67EBFB492C2B856E00B42D39 /* CoinflipCoin.swift */,
+				67EBFB472C2B826900B42D39 /* CoinflipStatsStack.swift */,
 			);
 			path = Coinflip;
 			sourceTree = "<group>";
@@ -603,8 +609,10 @@
 			files = (
 				67EBFB102C1E473900B42D39 /* ContentView.swift in Sources */,
 				67EBFB442C27C48100B42D39 /* CoinflipResult.swift in Sources */,
+				67EBFB4A2C2B856E00B42D39 /* CoinflipCoin.swift in Sources */,
 				67EBFB3F2C27C41000B42D39 /* CoinflipHome.swift in Sources */,
 				67EBFB422C27C47700B42D39 /* Coin.swift in Sources */,
+				67EBFB482C2B826900B42D39 /* CoinflipStatsStack.swift in Sources */,
 				67EBFB0E2C1E473900B42D39 /* Simply_Coinflip_iOSApp.swift in Sources */,
 				67EBFB462C27C48A00B42D39 /* CoinflipStats.swift in Sources */,
 			);
@@ -967,11 +975,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simply Coinflip iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 45BFR3YKH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simply Coinflip";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -997,11 +1009,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Simply Coinflip iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 45BFR3YKH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Simply Coinflip";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
