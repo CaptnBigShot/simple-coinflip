@@ -32,8 +32,6 @@
 		67EBFB4F2C2E0E1E00B42D39 /* Simply_Coinflip_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB0D2C1E473900B42D39 /* Simply_Coinflip_iOSApp.swift */; };
 		67EBFB512C2E0E1E00B42D39 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB412C27C47700B42D39 /* Coin.swift */; };
 		67EBFB522C2E0E1E00B42D39 /* CoinflipStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB452C27C48A00B42D39 /* CoinflipStats.swift */; };
-		67EBFB562C2E270D00B42D39 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB552C2E270D00B42D39 /* Sample.swift */; };
-		67EBFB572C2E277B00B42D39 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB552C2E270D00B42D39 /* Sample.swift */; };
 		67EBFB5B2C306A9D00B42D39 /* CoinflipCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB5A2C306A9D00B42D39 /* CoinflipCoin.swift */; };
 		67EBFB5D2C306AB000B42D39 /* CoinflipStatsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB5C2C306AB000B42D39 /* CoinflipStatsStack.swift */; };
 		67EBFB5E2C306DA300B42D39 /* CoinflipHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EBFB3E2C27C41000B42D39 /* CoinflipHome.swift */; };
@@ -119,7 +117,6 @@
 		67EBFB452C27C48A00B42D39 /* CoinflipStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinflipStats.swift; sourceTree = "<group>"; };
 		67EBFB472C2B826900B42D39 /* CoinflipStatsStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinflipStatsStack.swift; sourceTree = "<group>"; };
 		67EBFB492C2B856E00B42D39 /* CoinflipCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinflipCoin.swift; sourceTree = "<group>"; };
-		67EBFB552C2E270D00B42D39 /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		67EBFB5A2C306A9D00B42D39 /* CoinflipCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinflipCoin.swift; sourceTree = "<group>"; };
 		67EBFB5C2C306AB000B42D39 /* CoinflipStatsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinflipStatsStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,7 +282,6 @@
 				67EBFB3E2C27C41000B42D39 /* CoinflipHome.swift */,
 				67EBFB492C2B856E00B42D39 /* CoinflipCoin.swift */,
 				67EBFB472C2B826900B42D39 /* CoinflipStatsStack.swift */,
-				67EBFB552C2E270D00B42D39 /* Sample.swift */,
 			);
 			path = Coinflip;
 			sourceTree = "<group>";
@@ -568,7 +564,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67EBFB4E2C2E0E1E00B42D39 /* CoinflipResult.swift in Sources */,
-				67EBFB572C2E277B00B42D39 /* Sample.swift in Sources */,
 				67EBFB4F2C2E0E1E00B42D39 /* Simply_Coinflip_iOSApp.swift in Sources */,
 				67EBFB512C2E0E1E00B42D39 /* Coin.swift in Sources */,
 				67EBFB5E2C306DA300B42D39 /* CoinflipHome.swift in Sources */,
@@ -601,7 +596,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67EBFB102C1E473900B42D39 /* ContentView.swift in Sources */,
-				67EBFB562C2E270D00B42D39 /* Sample.swift in Sources */,
 				67EBFB442C27C48100B42D39 /* CoinflipResult.swift in Sources */,
 				67EBFB4A2C2B856E00B42D39 /* CoinflipCoin.swift in Sources */,
 				67EBFB3F2C27C41000B42D39 /* CoinflipHome.swift in Sources */,
