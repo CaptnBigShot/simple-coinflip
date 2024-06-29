@@ -4,7 +4,9 @@ struct CoinflipStatsStack: View {
     var coin: Coin
     var sessionStats: CoinflipStats
     var isShowingText: Bool
-    
+    var deviceType = currentDeviceType()
+    var isSideways = isPhoneSideways()
+
     var body: some View {
         HStack(
             alignment: .top,
@@ -20,15 +22,15 @@ struct CoinflipStatsStack: View {
                                 .accessibilityIdentifier("TotalHeadsCountIcon")
                             Text(sessionStats.headsCount.description)
                                 .accessibilityIdentifier("TotalHeadsCount")
-                        }.font(.largeTitle)
+                        }.font(deviceType == "Apple Watch" ? .body : .largeTitle)
                     }
-                }.frame(alignment: .topLeading)
+                }.frame(alignment: .topLeading).padding(isSideways ? 20 : 0)
                 
                 VStack {
                     Text(coin.wasFlipped() ? "It's " + coin.result.description + "!" : " ")
-                        .font(.largeTitle)
+                        .font(deviceType == "Apple Watch" ? .body : .largeTitle)
                         .accessibilityIdentifier("CoinflipResult")
-                }.frame(maxWidth: .infinity, alignment: .center)
+                }.frame(maxWidth: .infinity, alignment: .center).padding(isSideways ? 20 : 0)
                 
                 VStack {
                     if (sessionStats.totalCount > 1) {
@@ -38,9 +40,9 @@ struct CoinflipStatsStack: View {
                                 .accessibilityIdentifier("TotalTailsCountIcon")
                             Text(sessionStats.tailsCount.description)
                                 .accessibilityIdentifier("TotalTailsCount")
-                        }.font(.largeTitle)
+                        }.font(deviceType == "Apple Watch" ? .body : .largeTitle)
                     }
-                }.frame(alignment: .topTrailing)
+                }.frame(alignment: .topTrailing).padding(isSideways ? 20 : 0)
                 Spacer()
             }
         }.scaledToFit()

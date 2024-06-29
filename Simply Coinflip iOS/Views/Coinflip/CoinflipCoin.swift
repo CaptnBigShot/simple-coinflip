@@ -3,6 +3,8 @@ import SwiftUI
 struct CoinflipCoin: View {
     var coin: Coin
     var isShowingText = true
+    var deviceType = currentDeviceType()
+    var isSideways = isPhoneSideways()
     
     var flipAnimation: Animation {
         Animation.easeInOut(duration: 1)
@@ -19,20 +21,22 @@ struct CoinflipCoin: View {
                     value: coin.wasFlipped()
                 )
                 .blur(radius: (1) * 20)
-                .padding(.top, -20)
+                .padding(.top, isSideways ? 20 : -20)
                 .padding(.horizontal, 20)
             
             if (isShowingText) {
                 Text(Image(systemName: coin.getCoinImage(isShowingText: isShowingText)))
-                    .font(.system(size: 70))
+                    .font(deviceType == "Apple Watch" ? .largeTitle : .system(size: 70))
                     .opacity(1)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                    .padding(.top, -20)
+                    .padding(.top, isSideways ? 20 : -20)
                     .accessibilityIdentifier("CoinflipResultIcon")
             }
-        }
+        }.frame(maxWidth: 500)
     }
 }
+
+
 
 #Preview {
     var coin = Coin()
