@@ -8,6 +8,8 @@ struct CoinflipStatsStack: View {
     var isSideways = isPhoneSideways()
 
     var body: some View {
+        let font = (deviceType == "Apple Watch" ? Font.body : Font.largeTitle)
+        
         HStack(
             alignment: .top,
             spacing: 0
@@ -22,13 +24,12 @@ struct CoinflipStatsStack: View {
                                 .accessibilityIdentifier("TotalHeadsCountIcon")
                             Text(sessionStats.headsCount.description)
                                 .accessibilityIdentifier("TotalHeadsCount")
-                        }.font(deviceType == "Apple Watch" ? .body : .largeTitle)
+                        }
                     }
                 }.frame(alignment: .topLeading).padding(isSideways ? 20 : 0)
                 
                 VStack {
                     Text(coin.wasFlipped() ? "It's " + coin.result.description + "!" : " ")
-                        .font(deviceType == "Apple Watch" ? .body : .largeTitle)
                         .accessibilityIdentifier("CoinflipResult")
                 }.frame(maxWidth: .infinity, alignment: .center).padding(isSideways ? 20 : 0)
                 
@@ -40,12 +41,13 @@ struct CoinflipStatsStack: View {
                                 .accessibilityIdentifier("TotalTailsCountIcon")
                             Text(sessionStats.tailsCount.description)
                                 .accessibilityIdentifier("TotalTailsCount")
-                        }.font(deviceType == "Apple Watch" ? .body : .largeTitle)
+                        }
                     }
                 }.frame(alignment: .topTrailing).padding(isSideways ? 20 : 0)
                 Spacer()
             }
-        }.scaledToFit()
+        }.font(font)
+            .scaledToFit()
             .minimumScaleFactor(0.01)
             .lineLimit(1)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)

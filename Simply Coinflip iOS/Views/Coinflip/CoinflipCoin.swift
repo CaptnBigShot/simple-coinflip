@@ -11,11 +11,13 @@ struct CoinflipCoin: View {
     }
     
     var body: some View {
+        let font = (deviceType == "Apple Watch" ? Font.largeTitle : Font.system(size: 70))
+        
         ZStack() {
             Circle()
                 .fill(AnyShapeStyle(coin.getCoinColor(isShowingText: isShowingText)))
                 .stroke(Color.white, lineWidth: 2)
-                .scaleEffect(isShowingText ? 1 : 2.7)
+                .scaleEffect(isShowingText ? 1 : 2.8)
                 .animation(
                     flipAnimation,
                     value: coin.wasFlipped()
@@ -26,13 +28,13 @@ struct CoinflipCoin: View {
             
             if (isShowingText) {
                 Text(Image(systemName: coin.getCoinImage(isShowingText: isShowingText)))
-                    .font(deviceType == "Apple Watch" ? .largeTitle : .system(size: 70))
                     .opacity(1)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     .padding(.top, isSideways ? 20 : -20)
                     .accessibilityIdentifier("CoinflipResultIcon")
             }
-        }.frame(maxWidth: 500)
+        }.font(font)
+            .frame(maxWidth: 500)
     }
 }
 
