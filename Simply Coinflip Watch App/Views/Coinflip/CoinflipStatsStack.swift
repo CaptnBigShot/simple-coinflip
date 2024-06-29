@@ -11,22 +11,19 @@ struct CoinflipStatsStack: View {
             spacing: 0
         ) {
             if (isShowingText) {
-                Spacer()
                 VStack {
                     if (sessionStats.totalCount > 1) {
                         Group {
                             Image(systemName: "brain.head.profile")
-                                .imageScale(.small)
                                 .accessibilityIdentifier("TotalHeadsCountIcon")
                             Text(sessionStats.headsCount.description)
                                 .accessibilityIdentifier("TotalHeadsCount")
-                        }.font(.largeTitle)
+                        }
                     }
                 }.frame(alignment: .topLeading)
                 
                 VStack {
                     Text(coin.wasFlipped() ? "It's " + coin.result.description + "!" : " ")
-                        .font(.largeTitle)
                         .accessibilityIdentifier("CoinflipResult")
                 }.frame(maxWidth: .infinity, alignment: .center)
                 
@@ -34,19 +31,14 @@ struct CoinflipStatsStack: View {
                     if (sessionStats.totalCount > 1) {
                         Group {
                             Image(systemName: "cat")
-                                .imageScale(.small)
                                 .accessibilityIdentifier("TotalTailsCountIcon")
                             Text(sessionStats.tailsCount.description)
                                 .accessibilityIdentifier("TotalTailsCount")
-                        }.font(.largeTitle)
+                        }
                     }
                 }.frame(alignment: .topTrailing)
-                Spacer()
             }
-        }.scaledToFit()
-            .minimumScaleFactor(0.01)
-            .lineLimit(1)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
 }
 

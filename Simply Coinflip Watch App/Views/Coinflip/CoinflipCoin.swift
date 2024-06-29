@@ -24,7 +24,7 @@ struct CoinflipCoin: View {
             
             if (isShowingText) {
                 Text(Image(systemName: coin.getCoinImage(isShowingText: isShowingText)))
-                    .font(.system(size: 70))
+                    .font(.largeTitle)
                     .opacity(1)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     .padding(.top, -20)
