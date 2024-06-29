@@ -2,28 +2,43 @@ import XCTest
 @testable import Simply_Coinflip_iOS
 
 final class Simply_Coinflip_iOSTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testFlipCoin() throws {
+        var coin = Coin()
+        XCTAssertEqual(coin.result, CoinflipResult.Unflipped)
+        XCTAssertFalse(coin.wasFlipped())
+        
+        coin.flip()
+        XCTAssert(coin.result == CoinflipResult.Heads || coin.result == CoinflipResult.Tails)
+        XCTAssertTrue(coin.wasFlipped())
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testCoinflipStats() throws {
+        let coinflipStats = CoinflipStats()
+        XCTAssertEqual(coinflipStats.headsCount, 0)
+        XCTAssertEqual(coinflipStats.tailsCount, 0)
+        XCTAssertEqual(coinflipStats.totalCount, 0)
+        
+        // Add an Unflipped coinflip result
+        let coinUnflipped = Coin()
+        coinflipStats.addCoinflip(coin: coinUnflipped)
+        XCTAssertEqual(coinflipStats.headsCount, 0)
+        XCTAssertEqual(coinflipStats.tailsCount, 0)
+        XCTAssertEqual(coinflipStats.totalCount, 0)
+        
+        // Add a Heads coinflip result
+        var coinHeads = Coin()
+        coinHeads.result = CoinflipResult.Heads
+        coinflipStats.addCoinflip(coin: coinHeads)
+        XCTAssertEqual(coinflipStats.headsCount, 1)
+        XCTAssertEqual(coinflipStats.tailsCount, 0)
+        XCTAssertEqual(coinflipStats.totalCount, 1)
+        
+        // Add a Tails coinflip result
+        var coinTails = Coin()
+        coinTails.result = CoinflipResult.Tails
+        coinflipStats.addCoinflip(coin: coinTails)
+        XCTAssertEqual(coinflipStats.headsCount, 1)
+        XCTAssertEqual(coinflipStats.tailsCount, 1)
+        XCTAssertEqual(coinflipStats.totalCount, 2)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
